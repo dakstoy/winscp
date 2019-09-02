@@ -1,0 +1,18 @@
+# Connect to the host and login using password
+open sftp://dextero:@178.128.223.152:64422/ -privatekey=C:\Users\bumbleprime\Desktop\Keys\Private_Keys.ppk
+# Change the remote directory
+cd /opt/openport/data/EDI/OUTBOUND/ACTIVEVIAM
+# get all the files in the remote directory and download them to a specific local directory
+get /opt/openport/data/EDI/OUTBOUND/ACTIVEVIAM/sgp1_powerbidata_diff.csv C:\Users\bumbleprime\Desktop\MYSQL_Data_Feed\
+get /opt/openport/data/EDI/OUTBOUND/ACTIVEVIAM/sgp1_reserve_diff.csv C:\Users\bumbleprime\Desktop\MYSQL_Data_Feed\
+get /opt/openport/data/EDI/OUTBOUND/ACTIVEVIAM/sgp1_carrierdata_diff.csv C:\Users\bumbleprime\Desktop\MYSQL_Data_Feed\
+get /opt/openport/data/EDI/OUTBOUND/ACTIVEVIAM/sgp1_driverstatus_phtxvc_diff.csv C:\Users\bumbleprime\Desktop\MYSQL_Data_Feed\
+get /opt/openport/data/EDI/OUTBOUND/ACTIVEVIAM/liquidity_diff_sgp1.csv C:\Users\bumbleprime\Desktop\MYSQL_Data_Feed\
+get /opt/openport/data/EDI/OUTBOUND/ACTIVEVIAM/sgp1_podata_diff.csv C:\Users\bumbleprime\Desktop\MYSQL_Data_Feed\
+get /opt/openport/data/EDI/OUTBOUND/ACTIVEVIAM/sgp1_epod_diff.csv C:\Users\bumbleprime\Desktop\MYSQL_Data_Feed\
+get /opt/openport/data/EDI/OUTBOUND/ACTIVEVIAM/sgp1_rewards_diff.csv C:\Users\bumbleprime\Desktop\MYSQL_Data_Feed\
+get /opt/openport/data/EDI/OUTBOUND/ACTIVEVIAM/sgp1_metric_report_diff.csv C:\Users\bumbleprime\Desktop\MYSQL_Data_Feed\
+get /opt/openport/data/EDI/OUTBOUND/ACTIVEVIAM/phspng_metric_report_diff_sgp1.csv C:\Users\bumbleprime\Desktop\MYSQL_Data_Feed\
+
+# Close and terminate the session
+exit

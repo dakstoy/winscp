@@ -1,0 +1,16 @@
+# Connect to the host and login using password
+open sftp://dexter:@sgp04.openport.com:60022/ -privatekey=C:\Users\bumbleprime\Desktop\Keys\Private_Keys.ppk
+# Change the remote directory
+cd /opt/openport/data/EDI/OUTBOUND/ACTIVEVIAM
+# get all the files in the remote directory and download them to a specific local directory
+get /opt/openport/data/EDI/OUTBOUND/ACTIVEVIAM/powerbidata.csv C:\Users\bumbleprime\Desktop\MYSQL_Data_Feed\
+get /opt/openport/data/EDI/OUTBOUND/ACTIVEVIAM/cost.csv C:\Users\bumbleprime\Desktop\MYSQL_Data_Feed\
+get /opt/openport/data/EDI/OUTBOUND/ACTIVEVIAM/uat_rates.csv C:\Users\bumbleprime\Desktop\MYSQL_Data_Feed\
+get /opt/openport/data/EDI/OUTBOUND/ACTIVEVIAM/carrierdata.csv C:\Users\bumbleprime\Desktop\MYSQL_Data_Feed\
+get /opt/openport/data/EDI/OUTBOUND/ACTIVEVIAM/uat_shipment_relay.csv C:\Users\bumbleprime\Desktop\MYSQL_Data_Feed\
+get /opt/openport/data/EDI/OUTBOUND/ACTIVEVIAM/uat_liquidity.csv C:\Users\bumbleprime\Desktop\MYSQL_Data_Feed\
+get /opt/openport/data/EDI/OUTBOUND/ACTIVEVIAM/uat_truckstatus.csv C:\Users\bumbleprime\Desktop\MYSQL_Data_Feed\
+get /opt/openport/data/EDI/OUTBOUND/ACTIVEVIAM/uat_poc_status.csv C:\Users\bumbleprime\Desktop\MYSQL_Data_Feed\
+
+# Close and terminate the session
+exit

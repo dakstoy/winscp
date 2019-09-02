@@ -1,0 +1,17 @@
+# Connect to the host and login using password
+open sftp://dextero:@103.213.115.133:63322/ -privatekey=C:\Users\bumbleprime\Desktop\Keys\Private_Keys.ppk -rawsettings SendBuf=0 SshSimple=0
+# Change the remote directory
+cd /opt/openport/data/EDI/OUTBOUND/ACTIVEVIAM
+# get all the files in the remote directory and download them to a specific local directory
+get /opt/openport/data/EDI/OUTBOUND/ACTIVEVIAM/pk_powerbidata_diff.csv C:\Users\bumbleprime\Desktop\MYSQL_Data_Feed\
+get /opt/openport/data/EDI/OUTBOUND/ACTIVEVIAM/pk_carrierdata_diff.csv C:\Users\bumbleprime\Desktop\MYSQL_Data_Feed\
+get /opt/openport/data/EDI/OUTBOUND/ACTIVEVIAM/pk_shipment_cancelled_diff.csv C:\Users\bumbleprime\Desktop\MYSQL_Data_Feed\
+get /opt/openport/data/EDI/OUTBOUND/ACTIVEVIAM/pk_product_diff.csv C:\Users\bumbleprime\Desktop\MYSQL_Data_Feed\
+get /opt/openport/data/EDI/OUTBOUND/ACTIVEVIAM/pk_shipment_relay_diff.csv C:\Users\bumbleprime\Desktop\MYSQL_Data_Feed\
+get /opt/openport/data/EDI/OUTBOUND/ACTIVEVIAM/pk_cancelled_shipment_relay_diff.csv C:\Users\bumbleprime\Desktop\MYSQL_Data_Feed\
+get /opt/openport/data/EDI/OUTBOUND/ACTIVEVIAM/pk_ping_diff.csv C:\Users\bumbleprime\Desktop\MYSQL_Data_Feed\
+get /opt/openport/data/EDI/OUTBOUND/ACTIVEVIAM/pk_param_config_diff.csv C:\Users\bumbleprime\Desktop\MYSQL_Data_Feed\
+
+
+# Close and terminate the session
+exit

@@ -1,0 +1,9 @@
+# Connect to the host and login using password
+open sftp://dextero:@138.197.215.241:60022/ -privatekey=C:\Users\bumbleprime\Desktop\Keys\Private_Keys.ppk
+# Change the remote directory
+cd /opt/openport/data/EDI/OUTBOUND/ACTIVEVIAM
+# get all the files in the remote directory and download them to a specific local directory
+get /opt/openport/data/EDI/OUTBOUND/ACTIVEVIAM/cn_podata.csv C:\Users\bumbleprime\Desktop\MYSQL_Data_Feed\
+
+# Close and terminate the session
+exit

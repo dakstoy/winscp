@@ -1,0 +1,8 @@
+﻿# Connect to the host and login using password
+open sftp://dextero:@sg1.openport.com:60022/ -privatekey=C:\Users\Admin\Desktop\Dexter_Stuffs\Private_Keys.ppk
+# Change the remote directory
+cd /opt/openport/data/EDI/OUTBOUND/ACTIVEVIAM
+# get all the files in the remote directory and download them to a specific local directory
+get /opt/openport/data/EDI/OUTBOUND/ACTIVEVIAM/sg_metric_report.csv C:\Users\Admin\Desktop\MYSQL_Data_Feed\
+# Close and terminate the session
+exit

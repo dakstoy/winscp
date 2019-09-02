@@ -1,0 +1,15 @@
+# Connect to the host and login using password
+open sftp://dextero:@sg1.openport.com:60022/ -privatekey=C:\Users\bumbleprime\Desktop\Keys\Private_Keys.ppk
+
+cd /opt/openport/data/EDI/OUTBOUND/ACTIVEVIAM
+
+rm FULL.dump
+
+cd /opt/openport/BATCH_JOBS
+
+# call full dump script
+
+call /opt/openport/BATCH_JOBS/transmit_activeviam_sg.sh
+
+# Close and terminate the session
+exit

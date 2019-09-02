@@ -1,0 +1,17 @@
+# Connect to the host and login using password
+open sftp://dextero:@sg1.openport.com:60022/ -privatekey=C:\Users\bumbleprime\Desktop\Keys\Private_Keys.ppk
+# Change the remote directory
+cd /opt/openport/data/EDI/OUTBOUND/ACTIVEVIAM
+# get all the files in the remote directory and download them to a specific local directory
+get /opt/openport/data/EDI/OUTBOUND/ACTIVEVIAM/sg_powerbidata.csv C:\Users\bumbleprime\Desktop\MYSQL_Data_Feed\
+get /opt/openport/data/EDI/OUTBOUND/ACTIVEVIAM/sg_reserve.csv C:\Users\bumbleprime\Desktop\MYSQL_Data_Feed\
+get /opt/openport/data/EDI/OUTBOUND/ACTIVEVIAM/sg_carrierdata.csv C:\Users\bumbleprime\Desktop\MYSQL_Data_Feed\
+get /opt/openport/data/EDI/OUTBOUND/ACTIVEVIAM/sg_podata.csv C:\Users\bumbleprime\Desktop\MYSQL_Data_Feed\
+get /opt/openport/data/EDI/OUTBOUND/ACTIVEVIAM/sg_epod.csv C:\Users\bumbleprime\Desktop\MYSQL_Data_Feed\
+get /opt/openport/data/EDI/OUTBOUND/ACTIVEVIAM/sg_driverstatus_phtxvc.csv C:\Users\bumbleprime\Desktop\MYSQL_Data_Feed\
+get /opt/openport/data/EDI/OUTBOUND/ACTIVEVIAM/sg_liquidity.csv C:\Users\bumbleprime\Desktop\MYSQL_Data_Feed\
+get /opt/openport/data/EDI/OUTBOUND/ACTIVEVIAM/sg_metric_report.csv C:\Users\bumbleprime\Desktop\MYSQL_Data_Feed\
+get /opt/openport/data/EDI/OUTBOUND/ACTIVEVIAM/phspng_metric_report.csv C:\Users\bumbleprime\Desktop\MYSQL_Data_Feed\
+
+# Close and terminate the session
+exit
